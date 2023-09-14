@@ -8,9 +8,9 @@ class Elemento {
 
 //Declaro el array con las opciones de Piedra, Papel o Tijera
 const opciones = [
-    new Elemento("piedra", "../imagenes/piedra.jpeg"),
-    new Elemento("papel", "../imagenes/papel.jpeg"),
-    new Elemento("tijera", "../imagenes/tijera.jpeg"),
+    new Elemento("piedra", "imagenes/piedra.jpeg"),
+    new Elemento("papel", "imagenes/papel.jpeg"),
+    new Elemento("tijera", "imagenes/tijera.jpeg"),
 ];
 
 // Funcion para la eleccion random de la PC
