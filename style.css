@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.cuadroJuego {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+    background-color: #f9f9f9;
+}
+
+.opciones {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 2.8rem 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+.resultado {
+    font-size: 18px;
+}
+
+.piedra {
+    background-image: url(imagenes/piedra.jpeg);
+    border-radius: 5%;
+    max-width: 100%;
+    height: auto;
+}
+
+.papel {
+    background-image: url(imagenes/papel.jpeg);
+    border-radius: 5%;
+}
+
+.tijera {
+    background-image: url(imagenes/tijera.jpeg);
+    border-radius: 5%;
+}
