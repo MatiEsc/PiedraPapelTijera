@@ -1,18 +1,25 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-color: black;
 }
 
 h1 {
-    color: #333;
+    color: whitesmoke;
+}
+
+.imagenGanador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cuadroJuego {
     margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid whitesmoke;
     width: 300px;
-    background-color: #f9f9f9;
+    background-color: #d69f9f;
 }
 
 .opciones {

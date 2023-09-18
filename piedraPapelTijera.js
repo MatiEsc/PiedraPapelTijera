@@ -40,17 +40,17 @@ function ganador(eleccionJugador, eleccionPc) {
     }
 }
 
-//Se define la funcion de que el jugador elija la opcion de piedra, papel o tijera
+//Se define las funciones de que la pc y el jugador elija la opcion de piedra, papel o tijera
 function elegirOpcion(eleccionJugador) {
     // Llama a la función para generar la elección random de la PC
     const eleccionPc = opcionRandom();
 
-    // Obtiene la instancia de Elemento correspondiente a la elección del jugador
-    const opcionJugador = opciones.find(
-        (opcion) => opcion.nombre === eleccionJugador
-    );
+    // Obtiene la instancia de Elemento correspondiente a la elección del jugador mediante una funcion regular
+    const opcionJugador = opciones.find(function (opcion) {
+        return opcion.nombre === eleccionJugador;
+    });
 
-    // Obtiene la instancia de Elemento correspondiente a la elección de la PC
+    // Obtiene la instancia de Elemento correspondiente a la elección de la PC mediante una funcion flecha
     const opcionPc = opciones.find((opcion) => opcion.nombre === eleccionPc);
 
     // Muestra las imágenes en lugar de los nombres en el elemento con id "resultado"
@@ -61,4 +61,14 @@ function elegirOpcion(eleccionJugador) {
         <img src="${opcionPc.imagen}" alt="${opcionPc.nombre}">
         <p>${ganador(eleccionJugador, eleccionPc)}</p>
     `;
+    // Un condicional para mostrar una imagen al ganar la partida y otro para que desaparezca y seguir jugando
+    if (
+        ganador(eleccionJugador, eleccionPc) ===
+        "Felicitaciones!! Ganaste Rey!!!!"
+    ) {
+        const ganadorImagen = document.getElementById("ganadorImagen");
+        ganadorImagen.style.display = "flex";
+    } else {
+        document.getElementById("ganadorImagen").style.display = "none";
+    }
 }
